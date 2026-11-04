@@ -15,6 +15,8 @@ public class GameOverScript : MonoBehaviour
         //If the player hit space. . .
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
+            GameObject coin = GameObject.FindFirstObjectByType<CoinScript>().gameObject;
+            Destroy(coin);
             //Then load the 'Example 3' scene
             SceneManager.LoadScene("Example 3");
         }
